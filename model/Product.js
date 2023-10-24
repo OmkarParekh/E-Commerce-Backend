@@ -3,30 +3,26 @@ const Schema = mongoose.Schema;
 
 // Craete Structure
 
-const IdeaSchema = new Schema({
-  username: {
+const ProductSchema = new Schema({
+  pname: {
     type: String,
     required: true,
   },
-  name: {
+  price: {
     type: String,
     required: true,
   },
-  password: {
+  ptype: {
     type: String,
     required: true,
   },
-  role: {
+  filename: {
     type: String,
-    required: true,
+    required: false,
   },
-  email: {
-    type: String,
-    required: true,
-  },
-  number: {
+  path: {
     type: String,
     required: true,
   },
 });
-mongoose.model("Users", IdeaSchema);
+mongoose.model("Products", ProductSchema);
